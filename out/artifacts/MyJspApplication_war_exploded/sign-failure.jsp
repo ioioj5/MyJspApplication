@@ -12,6 +12,6 @@
     <title>Failure - Sign In</title>
 </head>
 <body>
-
+<p>登入失败, 请 <a href="sign-in.jsp">返回</a> 重试</p>
 </body>
 </html>

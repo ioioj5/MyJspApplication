@@ -1,3 +1,5 @@
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <%--
   Created by IntelliJ IDEA.
   User: ioioj5
@@ -13,11 +15,18 @@
 </head>
 <body>
 <%
+    Date d = new Date();
+    SimpleDateFormat sf = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+
+    String time = sf.format(d);
+%>
+当前时间: <%=time %>
+<%
     String loginUser = "";
     if(session.getAttribute("loginUser") != null) {
         loginUser = session.getAttribute("loginUser").toString();
     }
 %>
-欢迎您, <%=loginUser %>, <a href="sign-out.jsp">退出</a>
+<p>欢迎您, <%=loginUser %>, <a href="index.jsp">首页</a>, <a href="sign-out.jsp">退出</a></p>
 </body>
 </html>

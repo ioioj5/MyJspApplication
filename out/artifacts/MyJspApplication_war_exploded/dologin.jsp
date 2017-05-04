@@ -16,7 +16,9 @@
         // 登陆成功
         session.setAttribute("loginUser", loginUser.getUserName());
         // 转发
-        request.getRequestDispatcher("sign-success.jsp").forward(request, response);
+        // request.getRequestDispatcher("sign-success.jsp").forward(request, response);
+        // 跳转
+        response.sendRedirect("index.jsp");
     } else {
         // 登陆失败, 跳转
         response.sendRedirect("sign-failure.jsp");
